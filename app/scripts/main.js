@@ -1,3 +1,1 @@
-
-
-var Ccid = Ember.Application.create();
+var App = Ember.Application.create();

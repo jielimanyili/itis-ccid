@@ -1,3 +1,3 @@
 
 // Requires Ember-Data
-// Ccid.Application = DS.Model.extend({});
+// App.Application = DS.Model.extend({});
