@@ -1,0 +1,23 @@
+.pageWrap {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.pageBody {
+    margin: 20px 0;
+}
+.pageBody ul,
+.pageBody li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.pageBody .searchFilter {
+    margin-bottom: 1px;
+}
+.pageBody .resultRow {
+    margin-bottom: 1px;
+}
+.pageBody .resultDetail {
+    margin-bottom: 1px;
+}
