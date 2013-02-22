@@ -1,1 +1,1 @@
-Chinese Christian Internet Directory
+Chinese Christian Internet Directory (Redesign)
