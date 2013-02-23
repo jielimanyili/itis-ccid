@@ -14,28 +14,43 @@
     </head>
     <body>
 
-      <div class="pageWrap">
-        <header class="pageHeader">
-          <img src="http://placehold.it/980x100&text=ccid-header">
-        </header>
-        <section class="pageBody">
-          <div class="searchFilter"><img src="http://placehold.it/980x60/333333&text=search+filters"></div>
-          <ul>
-            <li class="resultRow">
-              <img src="http://placehold.it/980x30&text=church+1">
-            </li>
-            <li class="resultDetail">
-              <img src="http://placehold.it/980x300/e2e2e2&text=church+detail">
-            </li>
-            <li class="resultRow"><img src="http://placehold.it/980x30&text=church+2"></li>
-            <li class="resultRow"><img src="http://placehold.it/980x30&text=church+3"></li>
-            <li class="resultRow"><img src="http://placehold.it/980x30&text=church+4"></li>
-          </ul>
-        </section>
-        <footer class="pageFooter">
-          <img src="http://placehold.it/980x100&text=footer">
-        </footer>
-      </div>
+      <script type="text/x-handlebars" data-template-name="application">
+        <div class="pageWrap">
+          <header class="pageHeader">
+            <img src="http://placehold.it/980x100&text=ccid-header">
+          </header>
+          <section class="pageBody">
+            <div class="searchFilter"><img src="http://placehold.it/980x60&text=search+filters"></div>
+            {{ outlet }}
+          </section>
+          <footer class="pageFooter">
+            <img src="http://placehold.it/980x100&text=footer">
+          </footer>
+        </div>
+      </script>
+
+      <script type="text/x-handlebars" data-template-name="organizations">
+        <div class="row">
+          <div class="span4">
+            {{#each organization in controller}}
+              <li class="resultRow">
+                {{#linkTo 'organization' organization }}{{organization.chineseName }}{{/linkTo}}
+              </li>
+            {{/each}}
+          </div>
+          <div class="span8">
+            {{ outlet }}
+          </div>
+        </div>
+        <ul>
+        </ul>
+      </script>
+
+      <script type="text/x-handlebars" data-template-name="organization">
+        <li class="resultDetail">
+          {{ chineseName }}
+        </li>
+      </script>
 
       <!--[if lt IE 7]>
           <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
@@ -45,14 +60,10 @@
 
       <!-- build:js scripts/scripts.js -->
       <script src="scripts/vendor/jquery.min.js"></script>
-      <script src="scripts/vendor/handlebars-1.0.0.beta.6.js"></script>
-      <script src="scripts/vendor/ember-1.0.pre.min.js"></script>
+      <script src="scripts/vendor/handlebars.js"></script>
+      <script src="scripts/vendor/ember-1.0.0-rc.1.js"></script>
+      <script src="scripts/vendor/ember-data.js"></script>
       <script src="scripts/main.js"></script>
-      <script src="scripts/routes/app-router.js"></script>
-      <script src="scripts/store.js"></script>
-      <script src="scripts/controllers/application-controller.js"></script>
-      <script src="scripts/models/application-model.js"></script>
-      <script src="scripts/views/application-view.js"></script>
       <!-- endbuild -->
 
       <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

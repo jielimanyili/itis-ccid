@@ -13,10 +13,23 @@
     list-style: none;
 }
 .pageBody .searchFilter {
-    margin-bottom: 1px;
+    margin-bottom: 10px;
 }
 .pageBody .resultRow {
-    margin-bottom: 1px;
+    height: 29px;
+    line-height: 29px;
+    background-color: #ccc;
+    border-bottom: 1px solid #eee;
+}
+.pageBody .resultRow a {
+    display: block;
+    text-decoration: none;
+    padding: 0 20px;
+}
+.pageBody .resultRow .active,
+.pageBody .resultRow a:hover {
+    background-color: #666;
+    color: #fff;
 }
 .pageBody .resultDetail {
     margin-bottom: 1px;
